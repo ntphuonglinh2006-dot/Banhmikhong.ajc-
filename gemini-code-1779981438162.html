@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản Đồ Bánh Mì Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="map-section">
+            <h1 class="title">Bản Đồ Bánh Mì Việt Nam</h1>
+            
+            <div class="map-wrapper">
+                <svg id="vietnam-map" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 120 40 Q 140 40 130 80 T 150 160 T 180 240 T 190 320 T 160 400 T 130 460 T 100 500" 
+                          fill="none" stroke="#bdc3c7" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 120 40 Q 140 40 130 80 T 150 160 T 180 240 T 190 320 T 160 400 T 130 460 T 100 500" 
+                          fill="none" stroke="#e0e0e0" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <!-- Các nút Pin ghim vị trí -->
+                <div class="pin" id="pin-hanoi" data-province="hanoi" style="top: 15%; left: 46%;">
+                    <div class="pin-icon">📍</div>
+                    <span class="pin-label">Hà Nội</span>
+                </div>
+                <div class="pin" id="pin-haiphong" data-province="haiphong" style="top: 18%; left: 58%;">
+                    <div class="pin-icon">📍</div>
+                    <span class="pin-label">Hải Phòng</span>
+                </div>
+                <!-- Mới thêm Huế -->
+                <div class="pin" id="pin-hue" data-province="hue" style="top: 40%; left: 58%;">
+                    <div class="pin-icon">📍</div>
+                    <span class="pin-label">Thừa Thiên Huế</span>
+                </div>
+                <div class="pin" id="pin-hoian" data-province="hoian" style="top: 45%; left: 62%;">
+                    <div class="pin-icon">📍</div>
+                    <span class="pin-label">Hội An</span>
+                </div>
+                <div class="pin" id="pin-saigon" data-province="saigon" style="top: 78%; left: 38%;">
+                    <div class="pin-icon">📍</div>
+                    <span class="pin-label">TP. Hồ Chí Minh</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section" id="info-panel">
+            <button class="close-btn" id="close-panel">✕</button>
+            <div class="info-content">
+                <div class="info-left">
+                    <img id="food-img" src="" alt="Bánh mì">
+                </div>
+                <div class="info-right">
+                    <h2 id="food-title">Tên Bánh Mì</h2>
+                    <p id="food-desc">Thông tin chi tiết về món bánh mì đặc sản tại tỉnh thành này sẽ hiển thị ở đây.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
